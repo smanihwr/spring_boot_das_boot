@@ -1,5 +1,6 @@
 package com.boot.config;
 
+import com.boot.repository.ShipwreckRepository;
 import org.springframework.boot.autoconfigure.flyway.FlywayDataSource;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceBuilder;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -19,10 +20,11 @@ public class PersistenceConfiguration {
         return DataSourceBuilder.create().build();
     }
 
-    @Bean
-    @ConfigurationProperties(prefix = "datasource.flyway")
-    @FlywayDataSource
-    public DataSource flywayDataSource() {
-        return DataSourceBuilder.create().build();
-    }
+//    @Bean
+//    @ConfigurationProperties(prefix = "datasource.flyway")
+//    @FlywayDataSource
+//    public DataSource flywayDataSource() {
+//        return DataSourceBuilder.create().build();
+//    }
+
 }
